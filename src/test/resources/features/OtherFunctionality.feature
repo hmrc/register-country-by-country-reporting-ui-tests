@@ -7,4 +7,4 @@ Feature: Other Functionality
     # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     And I click Sign out
-#    Then The Heading should be Give feedback
+    Then The Heading should be Give feedback
