@@ -3,8 +3,6 @@ Feature: Non-match user journeys for UTR and NINO
 
   Scenario Outline: 1 - UTR non-match
     Given Organisation User logs in to register for CBC
-    Then I navigate to start page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value and continue
     Then The Heading should be What type of business do you have?
@@ -15,9 +13,9 @@ Feature: Non-match user journeys for UTR and NINO
     Then The Heading should be <business name>
     And I enter NonMatch Company in value
     And click Continue button
-#    Then The Heading should be The details you entered did not match our records
-#    When click Try Again
-#    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
+    Then The Heading should be The details you entered did not match our records
+    When click Try Again
+    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
 
     Examples:
       | business type | page                                                    | business name                                 |

@@ -3,8 +3,6 @@ Feature: Business Registration with UTR
 
   Background: Registering with UTR
     Given Organisation User logs in to register for CBC
-    Then I navigate to start page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value and continue
     Then The Heading should be What type of business do you have?
@@ -43,7 +41,7 @@ Feature: Business Registration with UTR
     Then The Heading should be What is the telephone number for DAC team?
     And I enter 0044 7960898952 in value
     And click Continue button
-#    Then The Heading should be Check your answers before you register to report for MDR
+    Then The Heading should be Check your answers before you register
 #    And click Confirm and send
 #    Then The Heading should be Registration successful
 #    And The Page should include XAMDR0000111111
@@ -65,9 +63,9 @@ Feature: Business Registration with UTR
     And click Continue button
     Then The Heading should be Is this your business?
     When I select value-no and continue
-#    Then The Heading should be The details you entered did not match our records
-#    When click Try Again
-#    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
+   Then The Heading should be The details you entered did not match our records
+    When click Try Again
+    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
 
     Examples:
       | business type | page                                                    | business name                                 |

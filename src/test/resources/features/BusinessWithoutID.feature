@@ -3,8 +3,6 @@ Feature: Business Without ID journey
 
   Scenario: 1 - Business Registration w/ trading name, telephone & second contact
     Given Organisation User logs in to register for CBC
-    Then I navigate to start page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value-no and continue
     Then The Heading should be What is the name of your business?
@@ -41,15 +39,13 @@ Feature: Business Without ID journey
     Then The Heading should be What is the telephone number for DAC team?
     And I enter 0044 7960898952 in value
     And click Continue button
-#    Then The Heading should be Check your answers before you register to report for MDR
+    Then The Heading should be Check your answers before you register
 #    And click Confirm and send
 #    Then The Heading should be Registration successful
 #    And The Page should include XAMDR000033333
 
   Scenario: 2 - Business Registration w/ no trading name, no telephone & no second contact
     Given Organisation User logs in to register for CBC
-    Then I navigate to start page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value-no and continue
     Then The Heading should be What is the name of your business?
@@ -69,7 +65,7 @@ Feature: Business Without ID journey
     When I select value-no and continue
     Then The Heading should be Is there someone else we can contact if Joe Exotic is not available?
     When I select value-no and continue
-#    Then The Heading should be Check your answers before you register to report for MDR
+    Then The Heading should be Check your answers before you register
 #    And click Confirm and send
 #    Then The Heading should be Registration successful
 #    And The Page should include XAMDR000033333
