@@ -4,7 +4,6 @@ Feature: Unauthorised user should go to You can’t access page
   Scenario: 1 - Individual login
     Given Individual User logs in to register for CBC
     Then I navigate to individual page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Sorry, you’re unable to use this service
     And I click sign in with your organisation’s Government Gateway details
     Then the user should be on the new window with heading Authority Wizard
