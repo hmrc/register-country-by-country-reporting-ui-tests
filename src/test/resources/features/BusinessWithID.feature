@@ -42,9 +42,9 @@ Feature: Business Registration with UTR
     And I enter 0044 7960898952 in value
     And click Continue button
     Then The Heading should be Check your answers before you register
-#    And click Confirm and send
-#    Then The Heading should be Registration successful
-#    And The Page should include XAMDR0000111111
+    And click Confirm and send
+    Then The Heading should be Registration successful
+    And The Page should include XAMDR0000111111
 
     Examples:
       | business type | page                                                    | business name                                 |

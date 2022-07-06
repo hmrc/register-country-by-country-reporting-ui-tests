@@ -40,9 +40,9 @@ Feature: Business Without ID journey
     And I enter 0044 7960898952 in value
     And click Continue button
     Then The Heading should be Check your answers before you register
-#    And click Confirm and send
-#    Then The Heading should be Registration successful
-#    And The Page should include XAMDR000033333
+    And click Confirm and send
+    Then The Heading should be Registration successful
+    And The Page should include XAMDR000033333
 
   Scenario: 2 - Business Registration w/ no trading name, no telephone & no second contact
     Given Organisation User logs in to register for CBC
@@ -66,8 +66,8 @@ Feature: Business Without ID journey
     Then The Heading should be Is there someone else we can contact if Joe Exotic is not available?
     When I select value-no and continue
     Then The Heading should be Check your answers before you register
-#    And click Confirm and send
-#    Then The Heading should be Registration successful
-#    And The Page should include XAMDR000033333
+    And click Confirm and send
+    Then The Heading should be Registration successful
+    And The Page should include XAMDR000033333
 
 
