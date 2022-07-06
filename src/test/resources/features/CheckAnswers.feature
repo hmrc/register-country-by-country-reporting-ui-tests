@@ -1,4 +1,4 @@
-# this feature to run local only
+@tests
 Feature: Check Answers Page
   Scenario: 1 - Changing from Business with id to withou id
     Given Organisation User logs in to register for CBC
@@ -79,12 +79,10 @@ Feature: Check Answers Page
     Then The Heading should be Check your answers before you register
     And click Confirm and send
     Then The Heading should be Registration successful
-    And The Page should include XAMDR0000111111
+    And The Page should include XAMDR000033333
 
   Scenario: 2 - Business without id to Business with id
     Given Organisation User logs in to register for CBC
-    Then I navigate to start page
-    # remove navigation above ^ when automatic redirect in place
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value-no and continue
     Then The Heading should be What is the name of your business?

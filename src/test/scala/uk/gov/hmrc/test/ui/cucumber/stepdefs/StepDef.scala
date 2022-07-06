@@ -52,7 +52,7 @@ class StepDef extends BaseStepDef {
   }
 
   And(
-    """^(click Continue button|click Try Again)$"""
+    """^(click Continue button|click Confirm and send|click Try Again)$"""
   ) { (negate: String) =>
     Input.clickSubmit
   }
