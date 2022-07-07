@@ -79,7 +79,7 @@ Feature: Check Answers Page
     Then The Heading should be Check your answers before you register
     And click Confirm and send
     Then The Heading should be Registration successful
-    And The Page should include XAMDR000033333
+    And The Page should include XACBC000033333
 
   Scenario: 2 - Business without id to Business with id
     Given Organisation User logs in to register for CBC
@@ -159,4 +159,4 @@ Feature: Check Answers Page
     Then The Heading should be Check your answers before you register
     And click Confirm and send
     Then The Heading should be Registration successful
-    And The Page should include XAMDR0000111111
+    And The Page should include XACBC0000111111

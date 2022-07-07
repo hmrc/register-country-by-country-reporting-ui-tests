@@ -42,7 +42,7 @@ Feature: Business Without ID journey
     Then The Heading should be Check your answers before you register
     And click Confirm and send
     Then The Heading should be Registration successful
-    And The Page should include XAMDR000033333
+    And The Page should include XACBC000033333
 
   Scenario: 2 - Business Registration w/ no trading name, no telephone & no second contact
     Given Organisation User logs in to register for CBC
@@ -68,6 +68,6 @@ Feature: Business Without ID journey
     Then The Heading should be Check your answers before you register
     And click Confirm and send
     Then The Heading should be Registration successful
-    And The Page should include XAMDR000033333
+    And The Page should include XACBC000033333
 
 
