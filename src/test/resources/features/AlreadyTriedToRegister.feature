@@ -1,33 +1,26 @@
+@tests @ZAP
+Feature: Already tried to register, but not enrolled yet
 
-Feature: Internal errors
-@tests
-  Scenario Outline: 1 - Business with utr
+  Scenario: 1 Business registration with utr
     Given Organisation User logs in to register for CBC
-    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
+    Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)
     When I select value and continue
     Then The Heading should be What type of business do you have?
     And I select value_0 and continue
-    Then The Heading should be What is your Corporation Tax Unique Taxpayer Reference?
-    And I enter <utr> in value
+    And I enter 3333333333 in value
     And click Continue button
     Then The Heading should be What is the registered name of your business?
     And I enter CBC Company in value
     And click Continue button
-    Then The Heading should be Sorry, there is a problem with the service
+    Then The Heading should be Registration successful
+    And The Page should include XACBC0000123888
 
-    Examples:
-      | utr           |
-      | 9999999990    |
-      | 9999999991    |
-      | 9999999992    |
-      | 9999999993    |
-# run this when DC6-1902 is done
-  Scenario Outline: 3 - Business without ID
+  Scenario:2 Business registration without id
     Given Organisation User logs in to register for CBC
     Then The Heading should be Do you have a UK Unique Taxpayer Reference (UTR)?
     When I select value-no and continue
     Then The Heading should be What is the name of your business?
-    And I enter <name> in value
+    And I enter enrolment in value
     And click Continue button
     Then The Heading should be Does your business trade under a different name?
     When I select value-no and continue
@@ -45,12 +38,5 @@ Feature: Internal errors
     When I select value-no and continue
     Then The Heading should be Check your answers before you register
     And click Confirm and send
-    Then The Heading should be Sorry, there is a problem with the service
-
-    Examples:
-      | name         |
-      | error        |
-      | invalid      |
-      | server       |
-      | notProcessed |
-      | notFound     |
+    Then The Heading should be Registration successful
+    And The Page should include XACBC000033333
